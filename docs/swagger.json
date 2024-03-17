@@ -1,0 +1,95 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "contact": {},
+        "title": "Image Processing",
+        "version": "1.0.0"
+    },
+    "servers": [
+        {
+            "url": "http://127.0.0.1:3000"
+        }
+    ],
+    "paths": {
+        "/api/v1/compress": {
+            "post": {
+                "consumes": [
+                    "multipart/form-data"
+                ],
+                "parameters": [
+                    {
+                        "format": "binary",
+                        "in": "formData",
+                        "name": "image_file",
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": ""
+                    }
+                },
+                "description": "compress",
+                "operationId": "compress",
+                "summary": "compress"
+            }
+        },
+        "/api/v1/convert": {
+            "post": {
+                "consumes": [
+                    "multipart/form-data"
+                ],
+                "parameters": [
+                    {
+                        "format": "binary",
+                        "in": "formData",
+                        "name": "image_file",
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": ""
+                    }
+                },
+                "description": "convert",
+                "operationId": "convert",
+                "summary": "convert"
+            }
+        },
+        "/api/v1/resize": {
+            "post": {
+                "consumes": [
+                    "multipart/form-data"
+                ],
+                "parameters": [
+                    {
+                        "in": "formData",
+                        "name": "height",
+                        "type": "string"
+                    },
+                    {
+                        "format": "binary",
+                        "in": "formData",
+                        "name": "image_file",
+                        "type": "string"
+                    },
+                    {
+                        "in": "formData",
+                        "name": "width",
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": ""
+                    }
+                },
+                "description": "resize",
+                "operationId": "resize",
+                "summary": "resize"
+            }
+        }
+    },
+    "tags": []
+}

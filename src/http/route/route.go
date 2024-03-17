@@ -5,6 +5,7 @@ import (
 
 	"github.com/abdiltegar/image-processing/src/http/controller"
 	"github.com/gofiber/fiber/v2"
+	"github.com/gofiber/swagger"
 )
 
 type RouteConfig struct {
@@ -19,4 +20,10 @@ func (c *RouteConfig) Setup() {
 	routeV1.Post("/compress", c.ImageController.Compress)
 
 	c.App.Static("/result/", os.TempDir())
+
+	c.App.Get("/swagger/*", swagger.New(swagger.Config{
+		URL:          "https://github.com/abdiltegar/image-processing/docs/swagger.json",
+		DeepLinking:  false,
+		DocExpansion: "none",
+	}))
 }
