@@ -5,7 +5,9 @@ import (
 
 	"github.com/abdiltegar/image-processing/src/http/controller"
 	"github.com/gofiber/fiber/v2"
-	"github.com/gofiber/swagger"
+	fiberSwagger "github.com/swaggo/fiber-swagger"
+
+	_ "github.com/abdiltegar/image-processing/docs"
 )
 
 type RouteConfig struct {
@@ -21,9 +23,5 @@ func (c *RouteConfig) Setup() {
 
 	c.App.Static("/result/", os.TempDir())
 
-	c.App.Get("/swagger/*", swagger.New(swagger.Config{
-		URL:          "https://github.com/abdiltegar/image-processing/docs/swagger.json",
-		DeepLinking:  false,
-		DocExpansion: "none",
-	}))
+	c.App.Get("/swagger/*", fiberSwagger.WrapHandler)
 }
