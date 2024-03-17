@@ -16,6 +16,13 @@ git clone https://github.com/abdiltegar/image-processing
 ## **Install GoCV**
 The GoCV package provides Go language bindings for the OpenCV 4 computer vision library. To install GoCV, you can follow <a href="https://gocv.io/getting-started/" target="_blank">this instructions</a>.
 
+**Note: If you use windows, some steps might be different :**
+- **Just after installing MinGW-W64 and CMake, restart you device before execute `win_build_opencv.cmd`**
+- **If you don't have `src` folder under your `GOPATH`, create `src` folder and copy folder `gocv.io` and paste it in `src`. Open the folder `src/gocv.io/x/` rename folder `gocv@v~` to `gocv`**
+
+Refferences :
+- Youtube : <a href="https://www.youtube.com/watch?v=-zab8s7O8KI&pp=ygUEZ29jdg%3D%3D">cara install GoCV dan OpenCV di Windows 11 - Face recognition</a>
+
 
 ## **Install Other Dependencies**
 
