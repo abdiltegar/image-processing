@@ -17,7 +17,7 @@ git clone https://github.com/abdiltegar/image-processing
 The GoCV package provides Go language bindings for the OpenCV 4 computer vision library. To install GoCV, you can follow <a href="https://gocv.io/getting-started/" target="_blank">this instructions</a>.
 
 **Note: If you use windows, some steps might be different :**
-- **Just after installing MinGW-W64 and CMake, restart you device before execute `win_build_opencv.cmd`**
+- **Just after installing MinGW-W64 and CMake, restart your device before execute `win_build_opencv.cmd`**
 - **If you don't have `src` folder under your `GOPATH`, create `src` folder and copy folder `gocv.io` and paste it in `src`. Open the folder `src/gocv.io/x/` rename folder `gocv@v~` to `gocv`**
 
 Refferences :
